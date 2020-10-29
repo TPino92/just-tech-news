@@ -1,9 +1,9 @@
-const withAith = (req, res, next) => {
-    if (!req.session.user_id){
-        res.redirect('/login');
+const withAuth = (req, res, next) => {
+    if (!req.session.user_id) {
+      res.redirect('/login');
     } else {
-        next();
+      next();
     }
-};
-
-module.exports = withAuth;
+  };
+  
+  module.exports = withAuth;
